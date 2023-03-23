@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   text-align: center;
   justify-content: center;
-  padding: 0 7vh;
+  padding: 0 7vw;
 }
 
 .main .row a {
@@ -90,4 +90,21 @@ body {
     border-color: var(--main-color);
   }
 }
-  
+
+@media (max-width: 600px) {
+    .main {
+        width: 100%;
+    }
+    .main h1 {
+        font-size: 1.5em;
+    }
+    .main p {
+        font-size: 1.1em;
+    }
+    .main .row {
+        flex-direction: column;
+    }
+    .main .row a {
+        margin: 10px 0;
+    }
+}
