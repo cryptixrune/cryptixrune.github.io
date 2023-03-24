@@ -30,11 +30,11 @@ body {
   display: flex;
   flex-direction: row;
   background-color: var(--secondary-color);
-  margin-top: 14px;
+  margin-top: 1.4vh;
   border-radius: 10px;
   text-align: center;
   justify-content: center;
-  padding: 0 24.5vh;
+  padding: 0 23.8vh;
 }
 
 .main .row a {
@@ -42,12 +42,13 @@ body {
   border: none;
   background-color: transparent;
   color: white;
-  padding: 10px 30px;
-  margin: 10px;
+  padding: 1vh 3vh;
+  margin: 1vh;
   border-radius: 10px;
   font-size: medium;
   justify-content: center;
   text-decoration: none;
+  font-size: 1.7vh;
 }
 
 .main .row a:hover {
@@ -57,39 +58,38 @@ body {
 }
 
 .main .sub-text {
-  font-size: 1.2em;
+  font-size: 1.9vh;
   margin: 0;
   width: 50%;
   color: #c8c8c8;
 }
 
 .main h1 {
+  font-size: 3.5vh;
   overflow: hidden;
-  border-right: 0.15em solid var(--main-color);
+  border-right: 0.15em solid white;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.2em;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  letter-spacing: 0.15em;
+  animation: typing 0.8s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 .card-container {
   max-width: 80vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28vh, 1fr));
   grid-gap: 1vh;
   margin-top: 1vh;
 }
 
 .card {
-  position: relative;
-  width: auto;
-  height: auto;
   background: var(--secondary-color);
   border-radius: 10px;
   color: white;
   text-align: center;
   margin: 0px;
-  padding: 10px;
+  padding: 1vh;
+  margin-bottom: 1vh;
 }
 
 .card img {
@@ -108,7 +108,7 @@ body {
   padding: 10px 10px;
   margin: 0px;
   border-radius: 10px;
-  font-size: medium;
+  font-size: 1.6vh;
   justify-content: center;
   text-decoration: none;
   background-color: var(--main-color);
@@ -120,9 +120,9 @@ body {
   transition: 0.25s ease-in-out;
 }
 
-.card h2 {
-  font-size: 1.5em;
-  margin: 5px;
+.card h3 {
+  margin: 4px;
+  font-size: 1.9vh;
 }
 
 @keyframes typing {
@@ -130,7 +130,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 45.4vh;
   }
 }
 
@@ -140,7 +140,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: var(--main-color);
+    border-color: white;
   }
 }
 
@@ -165,15 +165,12 @@ body {
   .main .row a {
     margin: 10px 0;
   }
-
   .card {
     margin: auto;
   }
-
   .card img {
     width: 100%;
   }
-
   .card a {
     margin: 0;
   }
