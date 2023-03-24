@@ -13,7 +13,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98.3vh;
   color: white;
   font-family: "IBM Plex Mono", monospace;
 }
@@ -24,6 +23,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  margin-top: 20vh;
 }
 
 .main .row {
@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   text-align: center;
   justify-content: center;
-  padding: 0 7vw;
+  padding: 0 24.5vh;
 }
 
 .main .row a {
@@ -56,10 +56,10 @@ body {
   transition: 0.35s ease-in-out;
 }
 
-.main p {
+.main .sub-text {
   font-size: 1.2em;
   margin: 0;
-  width: 70%;
+  width: 50%;
   color: #c8c8c8;
 }
 
@@ -70,6 +70,59 @@ body {
   margin: 0 auto;
   letter-spacing: 0.2em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.card-container {
+  max-width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1vh;
+  margin-top: 1vh;
+}
+
+.card {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: var(--secondary-color);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+.card img {
+  width: 28vh;
+  height: auto;
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 1vh;
+  margin-top: 0.5vh;
+}
+
+.card a {
+  display: flex;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  margin: 0px;
+  border-radius: 10px;
+  font-size: medium;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--main-color);
+}
+
+.card a:hover {
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  transition: 0.25s ease-in-out;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 5px;
 }
 
 @keyframes typing {
@@ -91,20 +144,38 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-    .main {
-        width: 100%;
-    }
-    .main h1 {
-        font-size: 1.5em;
-    }
-    .main p {
-        font-size: 1.1em;
-    }
-    .main .row {
-        flex-direction: column;
-    }
-    .main .row a {
-        margin: 10px 0;
-    }
+/* Make the website mobile friendly and make it so the main does not overflow out of the screen while still keeping the style*/
+@media screen and (max-width: 884px) {
+  .main {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 1.5em;
+  }
+  .main p {
+    font-size: 1.1em;
+  }
+  .main .sub-text {
+    font-size: 1em;
+    width: 100%;
+  }
+  .main .row {
+    flex-direction: column;
+    padding: 0 11vh;
+  }
+  .main .row a {
+    margin: 10px 0;
+  }
+
+  .card {
+    margin: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card a {
+    margin: 0;
+  }
 }
