@@ -144,7 +144,6 @@ body {
   }
 }
 
-/* Make the website mobile friendly and make it so the main does not overflow out of the screen while still keeping the style*/
 @media screen and (max-width: 884px) {
   .main {
     width: 100%;
